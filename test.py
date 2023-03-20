@@ -30,6 +30,7 @@ class Test_Sauce:
         username = driver.find_element(By.ID, "user-name")
         password = driver.find_element(By.ID, "password")
         username.clear()
+        password.clear()
         username.send_keys("locked_out_user")
         password.send_keys("secret_sauce")
         button.click()
@@ -51,6 +52,7 @@ class Test_Sauce:
         username = driver.find_element(By.ID, "user-name")
         password = driver.find_element(By.ID, "password")
         course = driver.find_elements(By.CLASS_NAME, "course-listing")
+
         username.send_keys("standart_user")
         password.send_keys("secret_sauce")
         button.click()
