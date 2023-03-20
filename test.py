@@ -51,12 +51,13 @@ class Test_Sauce:
     def test_valid_login(self):
         username = driver.find_element(By.ID, "user-name")
         password = driver.find_element(By.ID, "password")
-        course = driver.find_elements(By.CLASS_NAME, "inventory_item")
         username.clear()
         password.clear()
         username.send_keys("standard_user")
         password.send_keys("secret_sauce")
         button.click()
+        sleep(2)
+        course = driver.find_elements(By.CLASS_NAME, "inventory_item")
         print(len(course))
 
 
